@@ -225,8 +225,8 @@ This project was developed as part of the **CodeAlpha Data Analytics Internship*
 The scraping demonstration uses [Books to Scrape](https://books.toscrape.com/), a website intended for web scraping practice.
 
 ## Dashboard Preview
-
-Dashboard Overview
-![Dashboard Overview](https://drive.google.com/file/d/1lmgh2mWCrYDT1P4dtxRiQl84Vu3dSo93/view?usp=sharing)
+<p align="center">
+  <img src="dashboard.png" alt="ShopSense Dashboard" width="100%">
+</p>
 
 **ShopSense — Turning Product Reviews into Data-Driven Insights.**
