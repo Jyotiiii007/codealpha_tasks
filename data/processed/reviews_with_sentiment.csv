@@ -1,0 +1,51 @@
+product_name,price,rating,review_text,compound,sentiment
+BoomBuds X1,1499.0,4.0,Sound quality is great but battery drains fast,0.3716,positive
+BoomBuds X1,1499.0,5.0,Very comfortable and clear sound,0.7548,positive
+AirTune Pro,2999.0,3.0,Good design but connectivity drops sometimes,0.2382,positive
+AirTune Pro,2999.0,,Overpriced for what you get,0.0,neutral
+BassPod Neo,999.0,2.0,Broke within a month,-0.4215,negative
+BassPod Neo,999.0,4.0,Good bass for the price,0.4404,positive
+SoundMax Elite,2499.0,5.0,Excellent sound quality and long battery life,0.5719,positive
+SoundMax Elite,2499.0,4.0,Comfortable fit but case feels cheap,0.4404,positive
+EchoBeat Mini,799.0,3.0,Average sound quality for daily use,0.0,neutral
+EchoBeat Mini,799.0,2.0,Battery life is disappointing,-0.4939,negative
+PowerBeat Z2,1899.0,4.0,Strong bass and stable connectivity,0.6705,positive
+PowerBeat Z2,1899.0,5.0,Great value and very comfortable,0.8777,positive
+ClearTone Air,2199.0,3.0,Sound is good but earbuds fall out easily,0.6187,positive
+ClearTone Air,2199.0,4.0,Lightweight design and decent battery,0.0,neutral
+BassStorm Pro,3499.0,5.0,Powerful bass and premium build quality,0.4215,positive
+BassStorm Pro,3499.0,2.0,Right earbud stopped working,-0.2263,negative
+WavePods Lite,1199.0,4.0,Good battery life and easy pairing,0.7003,positive
+WavePods Lite,1199.0,,The microphone quality is poor,-0.4767,negative
+SonicPulse S3,2799.0,5.0,Crystal clear sound and excellent comfort,0.8316,positive
+SonicPulse S3,2799.0,3.0,Good product but too expensive,0.2382,positive
+FlexFit Buds,1599.0,4.0,Secure fit during workouts,0.5994,positive
+FlexFit Buds,1599.0,2.0,Connection keeps dropping during calls,0.0,neutral
+NovaSound Air,1999.0,5.0,Excellent battery life and balanced sound,0.5719,positive
+NovaSound Air,1999.0,3.0,Charging case is bulky,0.0,neutral
+ThunderBass T1,1299.0,4.0,Deep bass and decent overall performance,0.0,neutral
+ThunderBass T1,1299.0,1.0,Stopped charging after two weeks,-0.2263,negative
+PureAudio Pro,3999.0,5.0,Outstanding sound quality and premium design,0.6124,positive
+PureAudio Pro,3999.0,3.0,Comfort is average for long listening sessions,0.3612,positive
+ClickPods Go,699.0,3.0,Easy to use but sound lacks bass,0.2382,positive
+ClickPods Go,699.0,4.0,Affordable and surprisingly comfortable,0.6705,positive
+ZenBuds Active,2299.0,5.0,Great for exercise and sweat resistant,0.6249,positive
+ZenBuds Active,2299.0,2.0,Battery drains quickly during calls,0.0,neutral
+SkyTune S5,1799.0,4.0,Clear calls and reliable connectivity,0.3818,positive
+SkyTune S5,1799.0,3.0,Sound quality is acceptable,0.3182,positive
+MetroBeat Neo,1099.0,2.0,Plastic build feels cheap,0.0,neutral
+MetroBeat Neo,1099.0,5.0,Excellent value for money,0.7269,positive
+CrystalPods X,3199.0,4.0,Rich sound and stylish design,0.5574,positive
+CrystalPods X,3199.0,2.0,Too expensive and uncomfortable,-0.3818,negative
+UrbanSound Buds,1399.0,4.0,Good everyday earbuds with decent battery,0.4404,positive
+UrbanSound Buds,1399.0,,Pairing is difficult sometimes,-0.3612,negative
+QuietBeat Pro,4499.0,5.0,Noise cancellation works extremely well,0.3384,positive
+QuietBeat Pro,4499.0,3.0,Noise cancellation is good but wind noise is noticeable,0.2382,positive
+MiniTune Go,899.0,4.0,Compact size and simple controls,0.0,neutral
+MiniTune Go,899.0,1.0,One earbud stopped working after a week,-0.2263,negative
+PowerPods Max,2699.0,5.0,Long battery life and powerful sound,0.4215,positive
+PowerPods Max,2699.0,4.0,Comfortable fit and fast charging,0.7003,positive
+RetroBeat Classic,999.0,3.0,Design looks nice but audio is average,0.2263,positive
+RetroBeat Classic,999.0,2.0,Build quality is disappointing,-0.4939,negative
+AeroSound Fit,2099.0,4.0,Lightweight and comfortable for running,0.5106,positive
+AeroSound Fit,2099.0,5.0,Excellent fit and stable connection,0.8126,positive
