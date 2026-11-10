@@ -1,50 +1,232 @@
-# ShopSense: E-commerce Product Intelligence and Review Analyzer
+# ShopSense — E-commerce Product Intelligence & Review Analyzer
 
-A data analytics internship project covering four tasks in one pipeline: web scraping, exploratory data analysis, data visualization, and sentiment analysis. Results are shown in a Streamlit dashboard.
+**CodeAlpha Data Analytics Internship Project**
 
-## Data sources (please read)
+ShopSense is a data analytics project developed as part of the CodeAlpha internship. It combines web scraping, data cleaning, exploratory data analysis (EDA), data visualization, and sentiment analysis into one workflow.
 
-- **Reviews:** 50 practice reviews for about 25 earbuds products. This is generated practice data, **not real customer data**.
-- **Scraping:** `requests` and `BeautifulSoup` on [books.toscrape.com](https://books.toscrape.com), a site built for scraping practice (11 books, title and price). It demonstrates the technique; it contains no reviews.
+The project explores product information and customer-review patterns using Python and presents the analytical results through an interactive Streamlit dashboard.
 
-Findings below describe the method on a small sample. They are not claims about the real earbuds market.
+## Project Objectives
 
-## What the project does
+The main objective is to demonstrate practical data analytics skills through an end-to-end project:
 
-1. **Scraping:** fetch a page, extract fields, save to CSV.
-2. **Cleaning and EDA:** found and removed 1 junk row (51 to 50 rows), kept 3 reviews with missing ratings, checked duplicates, rating distribution, rating vs sentiment, price vs rating.
-3. **Visualization:** Matplotlib charts in notebooks, Plotly charts in the dashboard.
-4. **Sentiment analysis:** VADER baseline, plus an aspect-based baseline (keyword matching, reviews split at "but").
+- Collect structured information using web scraping.
+- Clean and validate raw datasets.
+- Perform exploratory data analysis to identify patterns and relationships.
+- Create meaningful visualizations.
+- Analyze review sentiment using NLP techniques.
+- Explore aspect-based sentiment using keyword matching.
+- Present findings through an interactive dashboard.
 
-## Results (50-review practice sample)
+## Key Features
 
-- Sentiment: 32 positive, 9 neutral, 9 negative.
-- Average rating by sentiment: negative 1.71 (7 rated reviews), neutral 3.00 (8), positive 4.13 (32).
-- Price vs average rating: correlation 0.36, weak, each product has only 1-2 ratings.
-- VADER check on the first 18 reviews with my own labels: accuracy 0.83 (15 of 18), neutral F1 0.57. Too few reviews to call this a reliable accuracy.
+### 1. Web Scraping
+- Used Python Requests and BeautifulSoup.
+- Scraped product information from Books to Scrape, a website designed for scraping practice.
+- Extracted book titles and prices from 11 books.
+- Exported scraped information into CSV format.
 
-## Limitations
+### 2. Data Cleaning & Preparation
+- Identified and removed one junk row (51 to 50 records).
+- Preserved three reviews with missing ratings.
+- Checked for duplicate records.
+- Prepared the dataset for analysis.
 
-- Practice data and a small sample.
-- Evaluation covers only 18 reviews, labelled by one person.
-- Custom lexicon scores (for words like "drains", "overpriced") are tuned guesses, not evaluated.
-- Aspect-level accuracy has not been measured.
-- Aspect keywords are hand-written, so reviews using other words are missed.
+### 3. Exploratory Data Analysis (EDA)
+- Analyzed rating and sentiment distributions.
+- Examined the relationship between ratings and sentiment.
+- Explored price versus average product rating.
+- Calculated descriptive statistics and correlation.
 
-## Project structure
-notebooks/   Jupyter notebooks (load, cleaning, scraping, EDA, visualization, sentiment, aspects)
-data/raw/    original and scraped data
-data/processed/   cleaned data and sentiment results
-app/app.py   Streamlit dashboard
-.streamlit/  dashboard theme
+### 4. Data Visualization
+- Created exploratory charts using Matplotlib.
+- Developed interactive visualizations using Plotly.
+- Presented analytical findings through a Streamlit dashboard.
 
-## Run the dashboard
+### 5. Sentiment Analysis
+- Applied VADER as a baseline sentiment-analysis method.
+- Classified reviews into positive, neutral, and negative categories.
+- Performed a manual evaluation using 18 labelled reviews.
 
+### 6. Aspect-Based Sentiment Analysis
+- Used keyword matching to identify product aspects.
+- Explored aspects such as battery life, comfort, connectivity, sound quality, and price.
+- Split reviews around the word "but" to identify contrasting opinions.
+
+## Dataset Information
+
+This project uses two separate datasets for demonstration:
+
+| Dataset | Description |
+|---|---|
+| Practice review dataset | 50 generated practice reviews covering approximately 25 earbud products |
+| Scraped dataset | 11 books collected from Books to Scrape, including titles and prices |
+
+**Important:** The earbud reviews are generated practice data, not real customer reviews. The scraped book dataset demonstrates web scraping and does not contain customer reviews.
+
+## Results & Findings
+
+The following results are based only on the 50-review practice dataset.
+
+| Metric | Result |
+|---|---:|
+| Total reviews | 50 |
+| Positive reviews | 32 |
+| Neutral reviews | 9 |
+| Negative reviews | 9 |
+| Average rating | 3.57 |
+| Price vs. average rating correlation | 0.36 |
+
+### Average Rating by Sentiment
+
+| Sentiment | Average Rating | Rated Reviews |
+|---|---:|---:|
+| Negative | 1.71 | 7 |
+| Neutral | 3.00 | 8 |
+| Positive | 4.13 | 32 |
+
+### VADER Evaluation
+
+- Evaluation sample: 18 manually labelled reviews.
+- Accuracy: 83% (15 out of 18 predictions).
+- Neutral-class F1-score: 0.57.
+
+These results demonstrate the workflow on a small practice dataset. They should not be interpreted as reliable estimates of real-world product or market behaviour.
+
+## Dashboard Preview
+
+The Streamlit dashboard provides an interactive view of:
+- Overall review statistics.
+- Sentiment distribution.
+- Aspect-based sentiment.
+- Product-level analysis.
+- Review insights.
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming |
+| Requests | Fetching web pages |
+| BeautifulSoup | HTML parsing and scraping |
+| Pandas & NumPy | Data cleaning and analysis |
+| Matplotlib | Exploratory visualizations |
+| Plotly | Interactive charts |
+| NLTK (VADER) | Sentiment analysis |
+| Scikit-learn | Evaluation metrics |
+| Streamlit | Interactive dashboard |
+| Jupyter Notebook | Analysis and experimentation |
+
+## Project Structure
+
+```text
+ShopSense/
+│
+├── notebooks/
+│   ├── data_loading.ipynb
+│   ├── data_cleaning.ipynb
+│   ├── web_scraping.ipynb
+│   ├── eda.ipynb
+│   ├── visualization.ipynb
+│   ├── sentiment_analysis.ipynb
+│   └── aspect_analysis.ipynb
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── app/
+│   └── app.py
+│
+├── .streamlit/
+│   └── config.toml
+│
+├── requirements.txt
+└── README.md
+```
+
+## Installation & Setup
+
+**1. Clone the repository**
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd ShopSense
+```
+
+**2. Create a virtual environment**
+
+```bash
+python -m venv venv
+```
+
+**3. Activate the environment**
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+macOS/Linux:
+
+```bash
+source venv/bin/activate
+```
+
+**4. Install dependencies**
+
+```bash
 pip install -r requirements.txt
+```
+
+**5. Run the Streamlit dashboard**
+
+```bash
 python -m streamlit run app/app.py
+```
 
-Run the command from the project root folder.
+Run the command from the project root directory.
 
-## Tech
+## Limitations & Future Improvements
 
-Python, Requests, BeautifulSoup, Pandas, Matplotlib, Plotly, NLTK (VADER), scikit-learn, Streamlit.
+### Current Limitations
+- The review dataset contains only 50 generated practice reviews.
+- The VADER evaluation uses only 18 manually labelled reviews.
+- Reviews were labelled by one person.
+- Custom sentiment lexicon adjustments have not been independently evaluated.
+- Aspect-based sentiment accuracy has not yet been measured.
+- Handwritten aspect keywords may miss reviews that use different expressions.
+
+### Future Improvements
+- Collect larger datasets from permitted sources.
+- Evaluate sentiment models on a larger manually labelled dataset.
+- Improve aspect detection using NLP techniques.
+- Compare VADER with machine-learning-based sentiment models.
+- Add more product comparison and filtering options.
+- Improve dashboard interactivity and reporting.
+
+## Learning Outcomes
+
+Through this project, I practised:
+
+- Web scraping and structured data extraction.
+- Data cleaning and preprocessing.
+- Exploratory data analysis.
+- Data visualization and interpretation.
+- Natural Language Processing fundamentals.
+- Sentiment classification and evaluation.
+- Building interactive dashboards using Streamlit.
+
+## Acknowledgement
+
+This project was developed as part of the **CodeAlpha Data Analytics Internship**.
+
+The scraping demonstration uses [Books to Scrape](https://books.toscrape.com/), a website intended for web scraping practice.
+
+## Dashboard Preview
+
+Dashboard Overview
+![Dashboard Overview](https://drive.google.com/file/d/1lmgh2mWCrYDT1P4dtxRiQl84Vu3dSo93/view?usp=sharing)
+
+**ShopSense — Turning Product Reviews into Data-Driven Insights.**
